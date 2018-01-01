@@ -136,17 +136,17 @@ if (command === "cusannounce") {
     message.reply("Check your DMs.")
   }
 
-if (command === "ascii ") {
- let art = command.Slice(6)
+if (command === "ascii") {
+ let art = args.join(" ");
 figlet(art, function(err, data) {
     if (err) {
        message.channel.sendMessage('Something went wrong...');
         message.channel.sendMessage(err);
         return;
     }
-    message.channel.sendMessage(data)
-})
- }
+    message.channel.sendMessage(data);
+});
+};
 
 
   if (command == "eval") {
