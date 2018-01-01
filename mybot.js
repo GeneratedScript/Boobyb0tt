@@ -29,7 +29,10 @@ client.on('message', message => {
 
   let args = message.content.split(" ").slice(1);
 
-
+if (command === "buy) {
+    message.author.sendMessage("Orphan is currently free.");
+}
+ 
   if (command === "say") {
       message.channel.sendMessage(args.join(" "));
   }
