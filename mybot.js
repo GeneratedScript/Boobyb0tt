@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const figlet = require('figlet');
 const client = new Discord.Client();
 const prefix = ";"
 client.on('ready', () => {
@@ -135,7 +136,17 @@ if (command === "cusannounce") {
     message.reply("Check your DMs.")
   }
 
-
+if (message.startsWith(";ascii ")) {
+ let art = command.Slice(7)
+figlet(art, function(err, data) {
+    if (err) {
+       message.channel.sendMessage('Something went wrong...');
+        message.channel.sendMessage(err);
+        return;
+    }
+    message.channel.sendMessage(data)
+});
+ };
 
 
   if (command == "eval") {
