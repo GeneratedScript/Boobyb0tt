@@ -136,8 +136,8 @@ if (command === "cusannounce") {
     message.reply("Check your DMs.")
   }
 
-if (message.startsWith(";ascii ")) {
- let art = command.Slice(7)
+if (command === "ascii ") {
+ let art = command.Slice(6)
 figlet(art, function(err, data) {
     if (err) {
        message.channel.sendMessage('Something went wrong...');
@@ -145,8 +145,8 @@ figlet(art, function(err, data) {
         return;
     }
     message.channel.sendMessage(data)
-});
- };
+})
+ }
 
 
   if (command == "eval") {
