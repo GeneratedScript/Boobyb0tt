@@ -96,7 +96,7 @@ let member = message.mentions.users.first();
 
 if (command === "buy") {
  message.author.sendMessage("Orphan is currently free. Check `#orphan` for more info.")
- message.channel.sendMessage("<#386849505758412802>")
+ message.channel.sendMessage("Orphan can be downloaded from <#386849505758412802>")
 }
 
 if (command === "cusannounce") {
