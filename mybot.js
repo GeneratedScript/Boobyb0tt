@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const figlet = require('figlet');
 const client = new Discord.Client();
 const prefix = ";"
 client.on('ready', () => {
@@ -135,18 +134,6 @@ if (command === "cusannounce") {
     message.author.sendMessage("Announce - admin - Announces whatever you want it to say. Usage is... ;announce (your message)\n cusannounce - admin - Same as announcement, but the usage is.. ;cusannounce <title>-<description>-<URL(Optional)>\n 8ball - misc - Makes an inference of what you put after 8ball\n roll - misc - Chooses a random number\n ban - admin - Bans a user - Has to have  'dyno-logs' channel\n kick - admin - Kicks a user - Has to have  'dyno-logs' channel\n mute - admin - Has to have  'dyno-logs' channel \n ping - misc - tests the speed of the bot. \n say - misc - repeats after what you put after it.\n help - misc - Obvious..\n lockdown - admin - Locks a specific channel, so people without roles cannot talk in the channel till the lockdown us lifted. Usage is... ;lockdown <milliseconds\n warn - admin - Warns a user. \n mydinfo - Tells **_YOUR** info. Usage... ;mydinfo");
     message.reply("Check your DMs.")
   }
-
-if (command === "ascii") {
- let art = args.join(" ");
-figlet(art, function(err, data) {
-    if (err) {
-       message.channel.sendMessage('Something went wrong...');
-        message.channel.sendMessage(err);
-        return;
-    }
-    message.channel.sendMessage(data);
-});
-};
 
 
   if (command == "eval") {
