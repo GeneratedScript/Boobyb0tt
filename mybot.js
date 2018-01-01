@@ -94,7 +94,10 @@ let member = message.mentions.users.first();
     }
   }
 
-
+if (command === "buy") {
+ message.author.sendMessage("Orphan is currently free. Check `#orphan` for more info.")
+ message.channel.sendMessage("#download")
+}
 
 if (command === "cusannounce") {
       if (message.member.hasPermission("ADMINISTRATOR")) {
