@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = ";"
+const prefix = "}"
 client.on('ready', () => {
  
-  client.user.setGame(";help");
+  client.user.setGame("}help");
 });
 
 client.on("guildMemberAdd", member => {
@@ -28,12 +28,17 @@ client.on('message', message => {
   command = command.slice(prefix.length)
 
   let args = message.content.split(" ").slice(1);
- 
-  if (command == "say") {
+
+
+  if (command === "say") {
       message.channel.sendMessage(args.join(" "));
   }
 
-
+  if (command === "butthurt") {
+  message.channel.sendMessage("Take this test to see if you are butthurt;", {
+    file: "https://cdn.discordapp.com/attachments/333084193078771712/370593583612297216/image.png"
+});
+  }
  
  if (command == "setnick") {
   if (message.member.hasPermission("ADMINISTRATOR")) {
@@ -94,10 +99,7 @@ let member = message.mentions.users.first();
     }
   }
 
-if (command === "buy") {
- message.author.sendMessage("Orphan is currently free. Check `#orphan` for more info.")
- message.channel.sendMessage("Orphan can be downloaded from <#386849505758412802>")
-}
+
 
 if (command === "cusannounce") {
       if (message.member.hasPermission("ADMINISTRATOR")) {
@@ -131,9 +133,11 @@ if (command === "cusannounce") {
   }
 
   if (command === "help") {
-    message.author.sendMessage("Announce - admin - Announces whatever you want it to say. Usage is... ;announce (your message)\n cusannounce - admin - Same as announcement, but the usage is.. ;cusannounce <title>-<description>-<URL(Optional)>\n 8ball - misc - Makes an inference of what you put after 8ball\n roll - misc - Chooses a random number\n ban - admin - Bans a user - Has to have  'dyno-logs' channel\n kick - admin - Kicks a user - Has to have  'dyno-logs' channel\n mute - admin - Has to have  'dyno-logs' channel \n ping - misc - tests the speed of the bot. \n say - misc - repeats after what you put after it.\n help - misc - Obvious..\n lockdown - admin - Locks a specific channel, so people without roles cannot talk in the channel till the lockdown us lifted. Usage is... ;lockdown <milliseconds\n warn - admin - Warns a user. \n mydinfo - Tells **_YOUR** info. Usage... ;mydinfo");
+    message.author.sendMessage("Announce - admin - Announces whatever you want it to say. Usage is... }announce (your message)\n cusannounce - admin - Same as announcement, but the usage is.. }cusannounce <title>-<description>-<URL(Optional)>\n 8ball - misc - Makes an inference of what you put after 8ball\n roll - misc - Chooses a random number\n ban - admin - Bans a user - Has to have  'mod-log' channel\n kick - admin - Kicks a user - Has to have  'mod-log' channel\n mute - admin - Has to have  'mod-log' channel \n ping - misc - tests the speed of the bot. \n say - misc - repeats after what you put after it.\n help - misc - Obvious..\n lockdown - admin - Locks a specific channel, so people without roles cannot talk in the channel till the lockdown us lifted. Usage is... }lockdown <milliseconds\n warn - admin - Wans a user. \n mydinfo - Tells **_YOUR}** info. Usage... >mydinfo");
     message.reply("Check your DMs.")
   }
+
+
 
 
   if (command == "eval") {
@@ -320,4 +324,4 @@ function clean(text) {
     return text;
 }
 
-            client.login('Mzk3MjY4NzIxNjQwNTM4MTEy.DStpbQ.Xpq6sCIoq9RxMZDBOnaCK-YWCDw');
+            client.login('Mzc1MTE0OTkzNzgxNDQwNTIy.DNrIkw.oUd1slRYXDO1HDssn2o2VEqa8qw');
